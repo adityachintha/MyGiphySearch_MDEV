@@ -17,15 +17,23 @@ function getData() {
         let gifURL = item.images.original.url;
         console.log("Url Fetching", gifURL);
 
+        let gitTitle = item.title;
+        console.log("Title Fetching", gitTitle);
+
         // create gif in a web page
-        const gifcontainer = document.getElementById("gifContainer");
+        const gifContainer = document.getElementById("gifContainer");
         let gif = document.createElement("img");
         gif.setAttribute("src", gifURL);
-        gifcontainer.appendChild(gif);
+        gifContainer.appendChild(gif);
       });
     })
 
     .catch(function (error) {
       console.log(error);
     });
+}
+
+function clearData() {
+  let gifContainer = document.getElementById("gifContainer");
+  gifContainer.innerHTML = "";
 }
