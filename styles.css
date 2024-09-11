@@ -9,7 +9,9 @@ h1 {
 }
 #gifContainer {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: center;
 }
 #searchButton {
   background-color: coral;
