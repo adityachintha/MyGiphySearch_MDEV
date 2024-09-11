@@ -1,6 +1,7 @@
 const searchButton = document.getElementById("searchButton");
 
 function getData() {
+  clearData();
   const searchInput = document.getElementById("searchInput").value;
 
   fetch(
@@ -22,9 +23,14 @@ function getData() {
 
         // create gif in a web page
         const gifContainer = document.getElementById("gifContainer");
+
         let gif = document.createElement("img");
         gif.setAttribute("src", gifURL);
         gifContainer.appendChild(gif);
+
+        let title = document.createElement("h3");
+        title.innerHTML = gitTitle;
+        gifContainer.appendChild(title);
       });
     })
 
